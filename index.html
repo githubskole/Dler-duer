@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ler duer</title>
+    <title>Dividering og ganging af tal</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="icon" type="image/png" href="favicon.png">
-
 </head>
 <body>
     <div class="container">
-        <h2>Dividering af tal</h2>
+        <h2>Omreng ler duer</h2>
         <div class="form-group">
             <label for="number">Indtast et tal:</label>
             <input type="number" class="form-control" id="number">
         </div>
-        <button type="button" class="btn btn-primary" onclick="divide()">Penge til duer</button>
+       
+        <button type="button" class="btn btn-primary" onclick="calculate()">Beregn</button>
+        
+        <br>
+        <br>
+        <br>
+        <h4>Hvor mange ler duer du kan få for pengen</h4>
         <div class="form-group">
-            <label for="result">Resultat:</label>
-            <input type="text" class="form-control" id="result" readonly>
+            <label for="result1">Resulater for ler duer uden medlemskab 1,75:</label>
+            <input type="text" class="form-control" id="result1" readonly>
+        </div>
+        <div class="form-group">
+            <label for="result2">Resulater for ler duer med medlemskab 1:</label>
+            <input type="text" class="form-control" id="result2" readonly>
+        </div>
+        <h4>Hvor meget </h4>
+        <div class="form-group">
+            <label for="result3">Hvor mange pange det koster for antal ler duer hvis du ikke har medlemskab:</label>
+            <input type="text" class="form-control" id="result3" readonly>
+        </div>
+        <div class="form-group">
+            <label for="result4">Hvor mange pange det koster for antal ler duer hvis du har medlemskab:</label>
+            <input type="text" class="form-control" id="result4" readonly>
         </div>
     </div>
     <script>
-        function divide() {
+        function calculate() {
             var number = document.getElementById("number").value;
             var result1 = number / 1.75;
             var result2 = number / 1;
-            document.getElementById("result").value = "Hvis du ikke har medlemskab: " + result1 + " Hvis du har medlemskab: " + result2;
+            var result3 = number * 1.75;
+            var result4 = number * 1;
+            document.getElementById("result1").value = result1;
+            document.getElementById("result2").value = result2;
+            document.getElementById("result3").value = result3;
+            document.getElementById("result4").value = result4;
         }
     </script>
-    <style>
-
-body
-{
-  background-image: url('https://gun-tac.dk/wp-content/uploads/2022/08/lerdueskydning-2-bg-lg.jpg');
-}
-
-h2
-{
-
-color: #fff;
-
-}
-
-label {
-
-    color: #fff;
-}
-
-    </style>
-
 </body>
 </html>
