@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ler duer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Dividering af tal</h2>
+        <div class="form-group">
+            <label for="number">Indtast et tal:</label>
+            <input type="number" class="form-control" id="number">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="divide()">Penge til duer</button>
+        <div class="form-group">
+            <label for="result">Resultat:</label>
+            <input type="text" class="form-control" id="result" readonly>
+        </div>
+    </div>
+    <script>
+        function divide() {
+            var number = document.getElementById("number").value;
+            var result1 = number / 1.75;
+            var result2 = number / 1;
+            document.getElementById("result").value = "Hvis du ikke har medlemskab: " + result1 + " Hvis du har medlemskab: " + result2;
+        }
+    </script>
+    <style>
+
+body
+{
+  background-image: url('https://gun-tac.dk/wp-content/uploads/2022/08/lerdueskydning-2-bg-lg.jpg');
+}
+
+h2
+{
+
+color: #fff;
+
+}
+
+label {
+
+    color: #fff;
+}
+
+    </style>
+
+</body>
+</html>
