@@ -9,9 +9,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* Hide the image initially */
+        #logo {
+            display: none;
+        }
+        /* Style the button */
+        button {
+            border: 2px solid black;
+            background: #ESE4E2;
+            font-size: 0.5em;
+            font-weight: bold;
+            color: black;
+            padding: 0.8em 2em;
+            margin-top: 0.4em;
+        }
+    </style>
+
+
 </head>
 <body>
-    
+         <!-- Your image (replace 'ntt-logo.png' with your image file) -->
+    <img src="Fri.png" id="logo">
+    <!-- Button to toggle the image visibility -->
+    <button id="logoButton">Get Logo</button>
 
     <div class="container">
         <h2>Omregn ler duer</h2>
@@ -57,7 +78,24 @@
             document.getElementById("result4").value = result4;
         }
     </script>
+
+
+
+    <script>
+        // Get references to the image and button
+        const logoImage = document.getElementById('logo');
+        const logoButton = document.getElementById('logoButton');
+
+        // Toggle image visibility when the button is clicked
+        logoButton.addEventListener('click', function () {
+            if (logoImage.style.display === 'none') {
+                logoImage.style.display = 'inline-block'; // Show the image
+            } else {
+                logoImage.style.display = 'none'; // Hide the image
+            }
+        });
+    </script>
     <a href="pacman-master/index.html">Pacman</a>
-    <img src="Fri.png" alt="Mat">
+
 </body>
 </html>
